@@ -1,0 +1,57 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:sans-serif;
+}
+
+body{
+  min-height:100vh;
+  background: linear-gradient(135deg,#ff0080,#7928ca,#2afadf);
+  background-size:400% 400%;
+  animation:bg 8s infinite alternate;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow:hidden;
+}
+
+@keyframes bg{
+  from{background-position:0% 50%;}
+  to{background-position:100% 50%;}
+}
+
+.card{
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(15px);
+  padding:25px;
+  border-radius:25px;
+  text-align:center;
+  box-shadow:0 0 40px rgba(0,0,0,0.4);
+  max-width:350px;
+}
+
+h1{color:#fff;}
+.name{font-size:1.8em;color:#ffeb3b;}
+.msg{color:#fff;margin:15px 0;}
+
+.btn{
+  display:inline-block;
+  padding:12px 25px;
+  background:#ffeb3b;
+  color:#000;
+  text-decoration:none;
+  border-radius:30px;
+  font-weight:bold;
+}
+
+.emoji{
+  position:absolute;
+  top:-10%;
+  font-size:30px;
+  animation:fall 5s linear infinite;
+}
+
+@keyframes fall{
+  to{transform:translateY(120vh) rotate(360deg);}
+}
